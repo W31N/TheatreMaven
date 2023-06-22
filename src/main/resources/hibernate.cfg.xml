@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/theatre_db</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">application_user</property>
+    <property name="connection.password">password</property>
+
+    <mapping class="com.example.theatremaven.entity.Act"/>
+    <mapping class="com.example.theatremaven.entity.Actor"/>
+    <mapping class="com.example.theatremaven.entity.ContractRoleAct"/>
+    <mapping class="com.example.theatremaven.entity.ContractRoleActor"/>
+    <mapping class="com.example.theatremaven.entity.Performance"/>
+    <mapping class="com.example.theatremaven.entity.Person"/>
+    <mapping class="com.example.theatremaven.entity.Piece"/>
+    <mapping class="com.example.theatremaven.entity.Rent"/>
+    <mapping class="com.example.theatremaven.entity.Role"/>
+    <mapping class="com.example.theatremaven.entity.Scene"/>
+    <mapping class="com.example.theatremaven.entity.Theatre"/>
+    <mapping class="com.example.theatremaven.entity.Ticket"/>
+    <mapping class="com.example.theatremaven.entity.Viewer"/>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

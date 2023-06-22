@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.theatremaven.SQLQueryController">
+   <children>
+      <TableView fx:id="tblResult" layoutX="14.0" layoutY="183.0" prefHeight="507.0" prefWidth="1338.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="183.0" />
+      <TextArea fx:id="txtQuery" layoutX="100.0" layoutY="17.0" prefHeight="151.0" prefWidth="433.0" />
+      <Button fx:id="btnExecute" layoutX="545.0" layoutY="143.0" mnemonicParsing="false" text="Применить" />
+      <Button fx:id="btn_back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Назад" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <HBox layoutX="763.0" layoutY="143.0" spacing="10.0">
+         <children>
+            <Button fx:id="request_1" mnemonicParsing="false" text="Запрос 1" />
+            <Button fx:id="request_2" mnemonicParsing="false" text="Запрос 2" />
+            <Button fx:id="request_3" mnemonicParsing="false" text="Запрос 3" />
+            <Button fx:id="request_4" mnemonicParsing="false" text="Запрос 4" />
+            <Button fx:id="request_5" mnemonicParsing="false" text="Запрос 5" />
+            <Button fx:id="request_6" mnemonicParsing="false" text="Запрос 6" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

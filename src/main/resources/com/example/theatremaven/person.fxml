@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.theatremaven.ControllerPerson">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="7.0" layoutY="67.0" prefHeight="142.0" prefWidth="171.0" spacing="15.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <Label text="Паспортные данные">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label text="Пол">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="ФИО">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="51.0" text="Дата рождения">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="192.0" layoutY="71.0" prefHeight="105.0" prefWidth="219.0" spacing="15.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <TextField fx:id="tf_passport_data" />
+            <TextField fx:id="tf_gender" />
+            <TextField fx:id="tf_full_name" />
+            <TextField fx:id="tf_birthdate" layoutX="10.0" layoutY="50.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tv" layoutX="427.0" layoutY="70.0" onMouseClicked="#handleMouseAction" prefHeight="511.0" prefWidth="925.0" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+        <columns>
+          <TableColumn fx:id="col_passport_data" prefWidth="175.0" text="Паспортные данные" />
+          <TableColumn fx:id="col_gender" prefWidth="106.0" text="Пол" />
+            <TableColumn fx:id="col_full_name" minWidth="0.0" prefWidth="183.0" text="ФИО" />
+            <TableColumn fx:id="col_birthdate" minWidth="0.0" prefWidth="183.0" text="Дата рождения" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_insert" layoutX="192.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Добавить" />
+      <Button fx:id="btn_update" layoutX="271.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Изменить" AnchorPane.leftAnchor="271.0" />
+      <Button fx:id="btn_delete" layoutX="352.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Удалить" />
+      <HBox layoutX="225.0" layoutY="14.0" spacing="15.0">
+         <children>
+            <Button fx:id="btn_act" mnemonicParsing="false" onAction="#handleButtonAction" text="Акт" />
+            <Button fx:id="btn_actor" mnemonicParsing="false" onAction="#handleButtonAction" text="Актер" />
+            <Button fx:id="btn_contract_role_act" mnemonicParsing="false" onAction="#handleButtonAction" text="Роль и Акт" />
+            <Button fx:id="btn_contract_role_actor" mnemonicParsing="false" onAction="#handleButtonAction" text="Роль и Актер" />
+            <Button fx:id="btn_performance" mnemonicParsing="false" onAction="#handleButtonAction" text="Спектакль" />
+            <Button fx:id="btn_person" mnemonicParsing="false" onAction="#handleButtonAction" text="Человек" />
+            <Button fx:id="btn_piece" mnemonicParsing="false" onAction="#handleButtonAction" text="Пьеса" />
+            <Button fx:id="btn_rent" mnemonicParsing="false" onAction="#handleButtonAction" text="Аренда" />
+            <Button fx:id="btn_role" mnemonicParsing="false" onAction="#handleButtonAction" text="Роль" />
+            <Button fx:id="btn_scene" mnemonicParsing="false" onAction="#handleButtonAction" text="Сцена" />
+            <Button fx:id="btn_ticket" mnemonicParsing="false" onAction="#handleButtonAction" text="Билет" />
+            <Button fx:id="btn_viewer" mnemonicParsing="false" onAction="#handleButtonAction" text="Зритель" />
+            <Button fx:id="btn_theatre" mnemonicParsing="false" onAction="#handleButtonAction" text="Театр" />
+         </children>
+      </HBox>
+      <TextField fx:id="tf_search" layoutX="194.0" layoutY="290.0" prefHeight="25.0" prefWidth="219.0" />
+      <Label layoutX="36.0" layoutY="289.0" text="Поиск (enter):">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_sql_query" layoutX="36.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" text="SQL" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>
